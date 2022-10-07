@@ -44,3 +44,31 @@ button {
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
 }
+
+@media (max-width: 500px) {
+  .container {
+    padding: 10px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  .flex {
+    gap: 5px;
+  }
+  input,
+  button {
+    font-size: 12px;
+    padding: 6px 8px;
+    border-radius: 5px;
+  }
+  #submit.flex {
+    gap: 0px;
+  }
+  #submit input {
+    border: none;
+    width: 122px;
+  }
+  #submit button {
+    border-left: 1px solid gray;
+  }
+}
