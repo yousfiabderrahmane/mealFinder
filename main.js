@@ -104,6 +104,8 @@ function addMealToDom(meal) {
 submit.addEventListener("submit", searchMeal);
 
 mealsEl.addEventListener("click", (e) => {
+  mealsEl.innerHTML = "";
+  resultHeading.innerHTML = "";
   const mealInfo = e.path.find((item) => {
     if (item.classList) {
       return item.classList.contains("meal-info");
