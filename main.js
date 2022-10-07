@@ -79,7 +79,7 @@ function addMealToDom(meal) {
   <p>${meal.strInstructions}</p>
   <h2>Ingredients</h2>
   <ul>
-
+  ${ingredients.map((ing) => `<li>${ing}</li>`).join("")}
 
   </ul>
   </div>
