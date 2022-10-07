@@ -55,6 +55,12 @@ function getMealById(mealID) {
       addMealToDom(meal);
     });
 }
+// Fetch random meal
+function getRandomMeal() {
+  // clear Meals and Headings (in case we already searched)
+  mealsEl.innerHTML = "";
+  resultHeading.innerHTML = "";
+}
 // Add meal to Dom
 function addMealToDom(meal) {
   const ingredients = [];
@@ -102,3 +108,5 @@ mealsEl.addEventListener("click", (e) => {
     getMealById(mealId);
   }
 });
+
+random.addEventListener("click", getRandomMeal);
