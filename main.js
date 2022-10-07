@@ -60,6 +60,14 @@ function getRandomMeal() {
   // clear Meals and Headings (in case we already searched)
   mealsEl.innerHTML = "";
   resultHeading.innerHTML = "";
+
+  fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
+    .then((res) => res.json())
+    .then((data) => {
+      const meal = data.meals[0];
+      addMealToDom(meal);
+      console.log(data);
+    });
 }
 // Add meal to Dom
 function addMealToDom(meal) {
